@@ -16,6 +16,7 @@
                 </tr>
             </table>
             </c:forEach>
+            <br>
             <a href="/newAd">Add a Lot!</a>
         </div>
     </body>

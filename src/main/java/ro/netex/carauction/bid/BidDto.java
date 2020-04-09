@@ -5,7 +5,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
-import lombok.Builder.Default;
 import lombok.Data;
 
 @AllArgsConstructor
@@ -15,8 +14,7 @@ public class BidDto {
     @Digits(integer = Integer.MAX_VALUE, fraction = 2)
     private Double price;
     @Size(max = 255)
-    @Default
-    private String bidderName = "Anonymous";
+    private String bidderName;
     @NotBlank
     @Digits(integer = 12, fraction = 0)
     @Size(min = 12)

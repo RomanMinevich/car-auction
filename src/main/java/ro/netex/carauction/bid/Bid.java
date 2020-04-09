@@ -1,10 +1,7 @@
 package ro.netex.carauction.bid;
 
-import static javax.persistence.GenerationType.IDENTITY;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
@@ -16,11 +13,12 @@ import lombok.NoArgsConstructor;
 @Table(name = "bids")
 public class Bid {
     @Id
-    @GeneratedValue(strategy = IDENTITY)
-    private Long bidId;
+    @Column(name = "ad_id")
     private Long adId;
     @Column(columnDefinition = "DECIMAL")
     private Double price;
+    @Column(name = "bidder_name")
     private String bidderName;
+    @Column(name = "bidder_phone_number")
     private String bidderPhoneNumber;
 }

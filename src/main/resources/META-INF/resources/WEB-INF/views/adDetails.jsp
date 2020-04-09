@@ -5,7 +5,7 @@
         <title>Chosen Car</title>
     </head>
     <body>
-        <div align="justify">
+        <div align="center">
             <b>Item ID:</b><p><c:out value="${ad.adId}"/></p>
             <br>
             <h2><c:out value="${ad.adTitle}"/></h2>
@@ -15,6 +15,8 @@
             <b>More:</b><p><c:out value="${ad.description}"/></p>
             <br>
             <form action="/ads/${ad.adId}/newBid"><input type="submit" value=" Bid on it! "></form>
+            <br>
+            <a href="/ads">Back to All Lots<<</a>
         </div>
     </body>
 </html>

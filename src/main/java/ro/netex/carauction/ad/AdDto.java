@@ -6,7 +6,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
-import lombok.Builder.Default;
 import lombok.Data;
 
 @AllArgsConstructor
@@ -26,8 +25,7 @@ public class AdDto {
     @Size(max = 4000)
     private String description;
     @Size(max = 255)
-    @Default
-    private String ownerName = "Anonymous";
+    private String ownerName;
     @Size(min = 12)
     @Digits(integer = 12, fraction = 0)
     private String ownerPhoneNumber;

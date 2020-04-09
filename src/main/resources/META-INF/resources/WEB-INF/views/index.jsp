@@ -11,5 +11,11 @@
             <a href="/newAd">Add a Lot</a>
             <p>Good luck!</p>
         </div>
+        <br>
+        <br>
+        <br>
+        <div align="right">
+            <a href="/winners">backstage</a>
+        </div>
     </body>
 </html>
