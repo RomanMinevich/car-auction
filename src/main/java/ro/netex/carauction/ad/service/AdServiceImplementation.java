@@ -13,7 +13,6 @@ public class AdServiceImplementation implements AdService {
     @Autowired
     private AdRepository adRepository;
 
-    //@Transactional("adTransactionManager")
     @Override
     public Ad addAd(AdDto adDto) {
         Ad ad = new Ad();
@@ -27,13 +26,11 @@ public class AdServiceImplementation implements AdService {
         return adRepository.save(ad);
     }
 
-    //@Transactional("adTransactionManager")
     @Override
     public List<Ad> getAllAds() {
         return adRepository.findAll();
     }
 
-    //@Transactional("adTransactionManager")
     @Override
     public Ad getAdDetails(Long adId) {
         return adRepository.getOne(adId);

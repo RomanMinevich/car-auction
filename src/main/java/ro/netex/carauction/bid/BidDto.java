@@ -10,13 +10,13 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class BidDto {
-    @Positive
-    @Digits(integer = Integer.MAX_VALUE, fraction = 2)
+    @Positive(message = "Bad credentials!")
+    @Digits(integer = Integer.MAX_VALUE, fraction = 2, message = "Bad credentials!")
     private Double price;
-    @Size(max = 255)
+    @Size(max = 255, message = "Bad credentials!")
     private String bidderName;
-    @NotBlank
-    @Digits(integer = 12, fraction = 0)
-    @Size(min = 12)
+    @NotBlank(message = "Cannot be blank")
+    @Size(min = 12, message = "Bad credentials!")
+    @Digits(integer = 12, fraction = 0, message = "Bad credentials!")
     private String bidderPhoneNumber;
 }

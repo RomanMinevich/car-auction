@@ -11,22 +11,22 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class AdDto {
-    @NotBlank
-    @Size(max = 255)
+    @NotBlank(message = "Cannot be blank!")
+    @Size(max = 255, message = "Bad credentials!")
     private String adTitle;
-    @NotBlank
-    @Size(max = 255)
+    @NotBlank(message = "Cannot be blank!")
+    @Size(max = 255, message = "Bad credentials!")
     private String manufacturer;
-    @NotBlank
-    @Size(max = 255)
+    @NotBlank(message = "Cannot be blank!")
+    @Size(max = 255, message = "Bad credentials!")
     private String model;
-    @Past
+    @Past(message = "Bad credentials!")
     private Year yearOfIssue;
-    @Size(max = 4000)
+    @Size(max = 4000, message = "Bad credentials!")
     private String description;
-    @Size(max = 255)
+    @Size(max = 255, message = "Bad credentials!")
     private String ownerName;
-    @Size(min = 12)
-    @Digits(integer = 12, fraction = 0)
+    @Size(min = 12, message = "Bad credentials!")
+    @Digits(integer = 12, fraction = 0, message = "Bad credentials!")
     private String ownerPhoneNumber;
 }
